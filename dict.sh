@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# Support any shell including POSIX sh
+
 dict_set_value() {
     dict="$1"
     key="$2"
