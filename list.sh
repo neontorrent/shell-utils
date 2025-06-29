@@ -81,3 +81,22 @@ list_print() {
   done
   IFS=$OLD_IFS
 }
+
+# Example
+# . ./list_utils.sh
+
+# Create a new list with two initial items
+list_create mylist "apple pie" "banana split"
+
+# Append two more items
+list_append mylist "grape juice" "fruit salad"
+
+# Show the list
+echo "Full list:"
+list_print mylist
+
+# Remove two items
+list_remove mylist "banana split" "fruit salad"
+
+echo "After removal:"
+list_print mylist
