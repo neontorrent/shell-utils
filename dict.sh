@@ -30,11 +30,10 @@ dict_for() {
 }
 
 # Example
-foo="foo"
-dict_set_value "$foo" "a" 1
-dict_set_value "$foo" "b" 2
+dict_set_value foo a 1
+dict_set_value foo b 2
 
-dict_get_value "$foo" "a" 
+dict_get_value foo a
 # print 1
 
 process_foo() {
@@ -42,7 +41,7 @@ process_foo() {
   value="$2"
   echo "There is a key $key and value $value"
 }
-dict_for "$foo" process_foo
+dict_for foo process_foo
 # print:
 # There is a key a and value 1
 # There is a key b and value 2
